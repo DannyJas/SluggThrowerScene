@@ -6,6 +6,9 @@ public interface IItem {
     void Pickup(Transform hand); 
     void Use(); 
     void Drop(); 
-    //hello
-    
+    //hello Its me Ive been waiting for you! 
+    //help me
+    //why don't you see me? 
+    //please see me. 
+
 }
