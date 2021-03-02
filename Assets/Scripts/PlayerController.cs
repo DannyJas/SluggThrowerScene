@@ -23,10 +23,12 @@ public class PlayerController : MonoBehaviour
     GameObject Bullet;
 
     void Update() {
+    
     if(Input.GetButtonDown("Fire1")) {
         Debug.Log("Is fire one working???");
         if(heldItem != null) {
             heldItem.Use(); 
+
             Debug.Log("ERROR HERE?" + heldItem);  
         } else {
             Debug.Log("we arent holding anyhting."); 

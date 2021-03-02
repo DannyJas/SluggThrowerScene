@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour, IItem
     
     [SerializeField] 
     Transform firePoint;
-    GameObject Bullet;
+    //GameObject Bullet;
 
       bool canShoot = true;
 
@@ -30,19 +30,17 @@ public class Gun : MonoBehaviour, IItem
 
     public void Use () {
 
-        GameObject FirePoint = GameObject.Find("FirePoint"); 
-        //gameObject.GetComponent("FirePoint"); 
-        //gameObject.transform.SetParent(GameObject Slug Thrower);  
-        //gameObject.transform.GetChild(FirePoint); 
-        //Transform firePoint = GameObject.Find("FirePoint").transform; 
+        if(!canShoot) return; 
+        Debug.Log("<color=red>POW!</color>"); 
+        GameObject bullet = GameObject.CreatePrimitive(PrimitiveType.Cube); 
+        bullet.transform.localScale = Vector3.one * 0.2f;
+        bullet.transform.position = firePoint.position; 
+        bullet.transform.Translate(transform.forward); 
+        Rigidbody rb = bullet.AddComponent<Rigidbody>(); 
+        rb.AddForce(transform.forward *5, ForceMode.Impulse); 
+        canShoot = false; 
+        StartCoroutine(Wait());  
 
-        GameObject bullet = Instantiate(Bullet, firePoint.position, firePoint.rotation, null); 
-        bullet.GetComponent<Rigidbody>().AddForce(transform.forward *400);
-
-        Debug.Log("<color=red>POW!<color>"); 
-
-        StartCoroutine(Wait());
-        canShoot = false;
 
     }
 

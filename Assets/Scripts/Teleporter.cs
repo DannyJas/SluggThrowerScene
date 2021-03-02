@@ -9,7 +9,9 @@ public class Teleporter : MonoBehaviour
     Transform destination;
      
      void OnTriggerEnter(Collider other) {
+         if(other.gameObject.CompareTag("Player")) {
          other.transform.position = destination.position; 
          other.transform.Translate(Vector3.up);
+         }
      }
 }
