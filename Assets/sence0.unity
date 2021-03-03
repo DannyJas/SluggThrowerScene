@@ -1173,6 +1173,7 @@ MonoBehaviour:
   firePoint: {fileID: 1038735840}
   FiredBullet: {fileID: 5083804736689631800, guid: f8f93a6ec3e34fc49be00cc4cd8c48e4,
     type: 3}
+  player: {fileID: 877958249}
 --- !u!54 &1592107220
 Rigidbody:
   m_ObjectHideFlags: 0
