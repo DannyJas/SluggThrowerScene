@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour 
 {
-    public int coins; 
+    public int coins = 0; 
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +60,14 @@ public class PlayerController : MonoBehaviour
             other.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV();
         }
 
+        if(other.gameObject.CompareTag("coin")) {
+            Debug.Log("Coins collected: "+ coins);
+            Destroy(other.gameObject);
+            coins +=1;
+            
+            // Destroy the coin
+            Destroy(other.gameObject);
+        }
 
     }
     void OnTriggerExit(Collider other)
