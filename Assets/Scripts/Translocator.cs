@@ -36,7 +36,7 @@ public class Translocator : MonoBehaviour, IItem
             bullet.transform.position = firePoint.position; 
             bullet.transform.Translate(transform.forward); 
             Rigidbody rb = bullet.AddComponent<Rigidbody>(); 
-            rb.AddForce(transform.forward *5, ForceMode.Impulse); 
+            rb.AddForce(transform.forward * 15, ForceMode.Impulse); 
 
         }
         hasBeenFired = !hasBeenFired; 
