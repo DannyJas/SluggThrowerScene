@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     }
     }
 
+    int totalKeys = 0; 
+
     void OnTriggerEnter(Collider other) {
         
         Debug.Log("I have hit" + other.gameObject.name);
@@ -67,6 +69,22 @@ public class PlayerController : MonoBehaviour
             
             // Destroy the coin
             Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Door")) {
+            if(totalKeys > 0 ) {
+                totalKeys -= 1; 
+                Destroy(other.gameObject); 
+            } else {
+                Debug.Log("LOL go find the key to open the door bro!");
+            }
+        }
+
+        if (other.gameObject.CompareTag("Key")) {
+            totalKeys += 1; 
+            Destroy(other.gameObject);
+
+
         }
 
     }

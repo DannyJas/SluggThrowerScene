@@ -8,6 +8,10 @@ TagManager:
   - floor
   - Item
   - Translocator
+  - NextLevel
+  - LastLevel
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
