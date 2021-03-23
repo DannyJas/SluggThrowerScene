@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public interface IDamageable {
-    public int health{get; set;}
-    public void TakeDamage(int amount); 
-    
+    int health{get; set;}
+    void TakeDamage(int amount); 
+
 }
 
