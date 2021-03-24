@@ -5,10 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour 
 {
     public int coins = 0; 
+
+    [SerializeField] 
+    AudioClip dooropen; 
+
+    AudioSource aud; 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        aud = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -75,6 +81,7 @@ public class PlayerController : MonoBehaviour
             if(totalKeys > 0 ) {
                 totalKeys -= 1; 
                 Destroy(other.gameObject); 
+                aud.PlayOneShot(dooropen);
             } else {
                 Debug.Log("LOL go find the key to open the door bro!");
             }

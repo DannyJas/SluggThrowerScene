@@ -12,6 +12,7 @@ TagManager:
   - LastLevel
   - Door
   - Key
+  - Idamageable
   layers:
   - Default
   - TransparentFX
