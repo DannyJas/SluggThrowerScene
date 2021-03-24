@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +9,21 @@ public class Gun : MonoBehaviour, IItem
     Transform firePoint;
     //GameObject Bullet;
 
+    [SerializeField]
+    Rigidbody bulletPrefab; 
+
       bool canShoot = true;
 
+
+      [SerializeField] 
+    AudioClip shoot; 
+
+    AudioSource aud; 
 
     void Start() {
         if(firePoint == null) {
             firePoint = this.transform.GetChild(2); 
+            aud = this.GetComponent<AudioSource>(); 
         }
     } 
 
@@ -32,14 +41,14 @@ public class Gun : MonoBehaviour, IItem
 
         if(!canShoot) return; 
         Debug.Log("<color=red>POW!</color>"); 
-        GameObject bullet = GameObject.CreatePrimitive(PrimitiveType.Cube); 
-        bullet.transform.localScale = Vector3.one * 0.2f;
-        bullet.transform.position = firePoint.position; 
-        bullet.transform.Translate(transform.forward); 
-        Rigidbody rb = bullet.AddComponent<Rigidbody>(); 
-        rb.AddForce(transform.forward *20, ForceMode.Impulse); 
+        Rigidbody bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
+        //bullet.transform.localScale = Vector3.one * 0.2f;
+        //bullet.transform.position = firePoint.position; 
+        //bullet.transform.Translate(transform.forward); 
+        bullet.AddForce(transform.forward *20, ForceMode.Impulse); 
         canShoot = false; 
         StartCoroutine(Wait());  
+        aud.PlayOneShot(shoot);
 
 
     }
@@ -55,7 +64,7 @@ public class Gun : MonoBehaviour, IItem
     }
 
         IEnumerator Wait() {
-        yield return new WaitForSeconds(1);  //wait for 1 secound 
+        yield return new WaitForSeconds(0);  //wait for 1 secound 
         canShoot = true; //make canswitch true again. 
     }
 }
