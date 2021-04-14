@@ -35,6 +35,7 @@ public class Translocator : MonoBehaviour, IItem
             bullet.transform.localScale = Vector3.one * 0.2f;
             bullet.transform.position = firePoint.position; 
             bullet.transform.Translate(transform.forward); 
+            //rb.velocity = rb.velocity + new Vector3 (0f, 0f, -0.2f);
             Rigidbody rb = bullet.AddComponent<Rigidbody>(); 
             rb.AddForce(transform.forward * 15, ForceMode.Impulse); 
 
