@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyScript : MonoBehaviour
 {
 
-    public NavMeshAgent AIPreFab;
+    public MoveTo AIPreFab;
 
     public Transform goal; 
     public float interval = 2;
