@@ -8,8 +8,8 @@
 
         public Transform[] points;
         private int destPoint = 0;
-        private NavMeshAgent agent;
-
+        public NavMeshAgent agent;
+        public Transform goal;
 
         void Start () {
             agent = GetComponent<NavMeshAgent>();
@@ -42,5 +42,11 @@
             // close to the current one.
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 GotoNextPoint();
+                //float playerpostion = Vector3.Distance(this.transform.position, goal.transform.position);
+                //if (playerpostion <= 10) {
+                    //agent.destination =  goal.transform.position;
+                //}
+
+                Debug.Log("Distance to player: " + Vector3.Distance(this.transform.position, goal.transform.position));
         }
     }
