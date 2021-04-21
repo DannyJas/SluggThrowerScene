@@ -47,6 +47,6 @@
                     //agent.destination =  goal.transform.position;
                 //}
 
-                Debug.Log("Distance to player: " + Vector3.Distance(this.transform.position, goal.transform.position));
+                //Debug.Log("Distance to player: " + Vector3.Distance(this.transform.position, goal.transform.position));
         }
     }
