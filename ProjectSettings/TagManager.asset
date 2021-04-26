@@ -13,6 +13,10 @@ TagManager:
   - Door
   - Key
   - Idamageable
+  - Fire
+  - Air
+  - Earth
+  - Water
   layers:
   - Default
   - TransparentFX
