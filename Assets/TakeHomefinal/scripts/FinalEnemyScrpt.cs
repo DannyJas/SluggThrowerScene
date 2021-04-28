@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class FinalEnemyScrpt : MonoBehaviour
 {
@@ -15,15 +14,12 @@ public class FinalEnemyScrpt : MonoBehaviour
     Renderer rend;
     Color OrginalColor;
 
-    NavMeshAgent EnemyAi;
-     public Transform Player; 
 
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
         OrginalColor = rend.material.color;
-        EnemyAi = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -32,7 +28,6 @@ public class FinalEnemyScrpt : MonoBehaviour
         if(enemeyHealth == 0) {
             Destroy(this.gameObject);
         }
-         EnemyAi.destination = Player.position;
     }
 
     void OnCollisionEnter(Collision col) {

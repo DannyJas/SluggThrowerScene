@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 1373801954861840088}
   - component: {fileID: 1373801954861840089}
   - component: {fileID: 1373801954861840092}
+  - component: {fileID: 4780242590766340369}
   m_Layer: 0
   m_Name: Fire&WaterEnemy
   m_TagString: Untagged
@@ -321,3 +322,16 @@ NavMeshAgent:
   m_BaseOffset: 0.99999994
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4780242590766340369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373801954861840086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f81bc8cd528684da2c94c04cf50d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}

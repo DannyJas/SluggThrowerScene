@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 5418277963235794671}
   - component: {fileID: 5418277963235794664}
   - component: {fileID: 5418277963235794659}
+  - component: {fileID: -8674085006843400019}
   m_Layer: 0
   m_Name: Earth&FireEnmey
   m_TagString: Untagged
@@ -228,6 +229,19 @@ NavMeshAgent:
   m_BaseOffset: 0.99999994
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-8674085006843400019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5418277963235794665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f81bc8cd528684da2c94c04cf50d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &5418277963928691915
 GameObject:
   m_ObjectHideFlags: 0

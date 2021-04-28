@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7345800318210873162}
   - component: {fileID: 7345800318210873163}
   - component: {fileID: 7345800318210873166}
+  - component: {fileID: 1732360282518418931}
   m_Layer: 0
   m_Name: Air&EarthEnemy
   m_TagString: Enemy
@@ -205,7 +206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 2
   enemeyHealth: 10
-  Player: {fileID: 0}
 --- !u!195 &7345800318210873166
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -228,6 +228,19 @@ NavMeshAgent:
   m_BaseOffset: 0.99999994
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1732360282518418931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7345800318210873156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f81bc8cd528684da2c94c04cf50d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &7345800319186264805
 GameObject:
   m_ObjectHideFlags: 0
