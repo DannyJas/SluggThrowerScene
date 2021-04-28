@@ -15,15 +15,15 @@ public class Gun : MonoBehaviour, IItem
       bool canShoot = true;
 
 
-      [SerializeField] 
-    AudioClip shoot; 
+    int clip = 20;
+    //AudioClip shoot; 
 
-    AudioSource aud; 
+    //AudioSource aud; 
 
     void Start() {
         if(firePoint == null) {
             firePoint = this.transform.GetChild(2); 
-            aud = this.GetComponent<AudioSource>(); 
+            //aud = this.GetComponent<AudioSource>(); 
         }
     } 
 
@@ -40,15 +40,16 @@ public class Gun : MonoBehaviour, IItem
     public void Use () {
 
         if(!canShoot) return; 
+        if (clip != 0) {
         Debug.Log("<color=red>POW!</color>"); 
         Rigidbody bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); 
-        //bullet.transform.localScale = Vector3.one * 0.2f;
-        //bullet.transform.position = firePoint.position; 
-        //bullet.transform.Translate(transform.forward); 
         bullet.AddForce(transform.forward *20, ForceMode.Impulse); 
         canShoot = false; 
         StartCoroutine(Wait());  
-        aud.PlayOneShot(shoot);
+        clip--;
+        } else {
+            Drop();
+        }
 
 
     }

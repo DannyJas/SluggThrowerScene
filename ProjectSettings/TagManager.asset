@@ -17,6 +17,7 @@ TagManager:
   - Air
   - Earth
   - Water
+  - Bullet
   layers:
   - Default
   - TransparentFX

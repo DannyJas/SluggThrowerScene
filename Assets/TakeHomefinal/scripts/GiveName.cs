@@ -5,6 +5,7 @@ using TMPro;
 
 public class GiveName : MonoBehaviour
 {
+    [SerializeField]
     TMP_Text RandomName; 
     string [] names = new string [30];
     // Start is called before the first frame update
@@ -40,11 +41,12 @@ public class GiveName : MonoBehaviour
        names[27] = "Logic";
        names[28] = "Stick";
        names[29] = "Happy";
+       int randomNameNumber = Random.Range(0,29);
+       RandomName.text = names[randomNameNumber]; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
