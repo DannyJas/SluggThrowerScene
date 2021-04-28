@@ -16,7 +16,7 @@ public class FinalEnemyScrpt3 : MonoBehaviour
     Color OrginalColor;
 
     NavMeshAgent EnemyAi;
-     public Transform Player; 
+    public Transform Player; 
 
     // Start is called before the first frame update
     void Start()

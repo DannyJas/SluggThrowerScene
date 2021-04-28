@@ -18,6 +18,7 @@ TagManager:
   - Earth
   - Water
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
