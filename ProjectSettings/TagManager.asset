@@ -19,6 +19,7 @@ TagManager:
   - Water
   - Bullet
   - Enemy
+  - Health
   layers:
   - Default
   - TransparentFX

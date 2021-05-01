@@ -42,7 +42,9 @@ public class GiveName : MonoBehaviour
        names[28] = "Stick";
        names[29] = "Happy";
        int randomNameNumber = Random.Range(0,29);
-       RandomName.text = names[randomNameNumber]; 
+       string NewName = names[randomNameNumber]; 
+       RandomName.text = NewName; 
+       this.gameObject.name = NewName;
     }
 
     // Update is called once per frame

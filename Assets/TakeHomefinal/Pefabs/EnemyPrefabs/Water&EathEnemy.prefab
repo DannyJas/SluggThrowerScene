@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7109067871154101331}
   - component: {fileID: 7109067871154101334}
   - component: {fileID: 560327231234124406}
+  - component: {fileID: 4193270719023050869}
   m_Layer: 0
   m_Name: Water&EathEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 2
   enemeyHealth: 10
-  Player: {fileID: 0}
 --- !u!195 &7109067871154101334
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -149,6 +149,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!54 &4193270719023050869
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109067871154101340}
+  serializedVersion: 2
+  m_Mass: 20
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7109067871428197534
 GameObject:
   m_ObjectHideFlags: 0

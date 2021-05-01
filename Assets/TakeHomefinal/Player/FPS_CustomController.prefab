@@ -189,6 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48326ccd717a5c942bb0274e8481e847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  enenmydamage: 10
 --- !u!1 &14491929488753475
 GameObject:
   m_ObjectHideFlags: 0

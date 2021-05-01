@@ -48,7 +48,8 @@ public class Gun : MonoBehaviour, IItem
         StartCoroutine(Wait());  
         clip--;
         } else {
-            Drop();
+            canShoot = false;
+            // set player held item = null
         }
 
 
@@ -59,7 +60,7 @@ public class Gun : MonoBehaviour, IItem
         this.gameObject.transform.SetParent(null); 
         this.transform.Translate(0,0,2); 
         this.GetComponent<Rigidbody>().isKinematic = false; 
-        this.GetComponent<Rigidbody>().AddForce(Vector3.forward*10, ForceMode.Impulse); 
+        this.GetComponent<Rigidbody>().AddForce(Vector3.forward*1, ForceMode.Impulse); 
         this.GetComponent<Collider>().enabled = true; 
 
     }

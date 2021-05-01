@@ -4,26 +4,40 @@ using UnityEngine;
 
 public class boxspawner : MonoBehaviour
 {
-    public GameObject prefab; 
     public int xRange = 20, zRange = 20;
+    int enemycount = 0;
     public Transform player;
-    bool canSpawn = true;
-    // Start is called before the first frame update
-
-    // Update is called once per frame
+    public GameObject Enemy;
+    void Start () {
+        SpawnBox();
+    }
     void Update()
     {
-        StartCoroutine(Wait());
+
     }
     void SpawnBox() {
-        GameObject box = Instantiate(prefab, this.transform.position, this.transform.rotation); 
+        int RandomEnemy = Random.Range(0, 4);
+        int RandomHealth =Random.Range(1, 9);
+        Debug.Log(RandomEnemy);
+        GameObject box = Instantiate(Enemy, this.transform.position, this.transform.rotation); 
+        box.GetComponent<FinalEnemyScrpt>().RandomCase = RandomEnemy;  
         box.transform.Translate(Random.Range(-xRange, xRange), 5, Random.Range(-zRange, zRange));
-        box.AddComponent<Rigidbody>();
         box.GetComponent<MoveToPlayer>().Player = player;
+        box.GetComponent<FinalEnemyScrpt>().enemeyHealth = RandomHealth;
+        enemycount++;
+        if (enemycount < 2) {
+        StartCoroutine(FirstTwoWait()); 
+        } else {
+            StartCoroutine(FastSpawn());
+        }
     }
     
-    IEnumerator Wait() {
-        yield return new WaitForSeconds(5);
+    IEnumerator FirstTwoWait() {
+        yield return new WaitForSeconds(15);
+        SpawnBox(); 
+    }
+    IEnumerator FastSpawn() {
+        yield return new WaitForSeconds(2);
         SpawnBox(); 
     }
 }
