@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     AudioSource aud; 
 
+    public GameObject Gun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,21 +50,41 @@ public class PlayerController : MonoBehaviour
             Debug.Log("We aren't holding anything."); 
         }
     }
+    // if (Input.GetKeyDown(KeyCode.E)) {
+    //     if (gameObject.CompareTag("Item")) {
+    //         heldItem = gameObject.GetComponent<IItem>(); 
+    //         heldItem.Pickup(hand);  
+    //     }  
+    // }
     }
 
     int totalKeys = 0; 
 
+
+    // void OnCollisionEnter (Collision other) {
+    //     if (other.gameObject.CompareTag ("Item")) {
+    //         Gun = other.gameObject;
+    //         if (Input.GetKeyDown(KeyCode.E)) { 
+    //             if (heldItem != null) {
+    //                 return;
+    //             } 
+    //         heldItem = Gun.GetComponent<IItem>();
+    //         heldItem.Pickup(hand);
+    // }
+    //     }
+    // }
+
     void OnTriggerEnter(Collider other) {
         
-        Debug.Log("I have hit" + other.gameObject.name);
+    Debug.Log("I have hit" + other.gameObject.name);
         if(other.gameObject.CompareTag("Item")) {
             Debug.Log("HELP ME PLEASE");
             if(heldItem != null) {
                 return;
-            }
+            } //if (Input.GetKeyDown(KeyCode.E)) {
             heldItem = other.GetComponent<IItem>(); 
             heldItem.Pickup(hand); 
-
+            //}
         }
         if (other.gameObject.CompareTag("floor")) {
             other.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV();

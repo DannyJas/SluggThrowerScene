@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TakeHomefinal/Final.unity
     guid: e39928a3f565e05488e82b29f4350554
+  - enabled: 1
+    path: Assets/TakeHomefinal/WinScreen.unity
+    guid: df1c760b47479af4e8579eeac72ed7b0
   m_configObjects: {}

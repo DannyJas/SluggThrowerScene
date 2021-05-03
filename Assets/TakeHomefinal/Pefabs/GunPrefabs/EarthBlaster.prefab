@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 172219705835235605}
   - component: {fileID: 172219705835235604}
   - component: {fileID: 172219705835235625}
-  - component: {fileID: 8292710153219140770}
+  - component: {fileID: 5858393095103426198}
   m_Layer: 0
   m_Name: EarthBlaster
   m_TagString: Item
@@ -132,7 +132,7 @@ MonoBehaviour:
   firePoint: {fileID: 1141867063217501861}
   bulletPrefab: {fileID: 4545652891310375554, guid: 290d91990c3eabf48ba4d907e7ec4d1b,
     type: 3}
---- !u!114 &8292710153219140770
+--- !u!114 &5858393095103426198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +145,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomName: {fileID: 4007157820949748488}
+  NewNames:
+  - Bloodspiller
+  - Harmony
+  - Remorse
+  - Singed Hand Cannon
+  - Proud Shooter
+  - Bandit's Golden Six-Shooter
+  - Furious Golden Hand Cannon
+  - Last Chance
+  - Gift Of Grieving Widows
+  - Finality
+  - Crusader Of Broken Dreams
+  - Mercy
+  - Might Of The Beast
+  - Warbringer
+  - Agony
+  - Spiteful Gun
+  - Private Six-Shooter
+  - Stormfury Ebon Flintlock
+  - Conqueror's Ironbark Flintlock
+  - Queller Of The Occult
+  - Daddy
+  - Dominion
+  - Contra
+  - Ultra85
+  - Iron man
+  - Ex-wife
+  - Captain
+  - Logic
+  - Stick
+  - Happy
 --- !u!1 &334099248868757154
 GameObject:
   m_ObjectHideFlags: 0

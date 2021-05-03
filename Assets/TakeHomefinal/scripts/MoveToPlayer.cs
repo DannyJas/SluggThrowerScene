@@ -18,4 +18,15 @@ public class MoveToPlayer : MonoBehaviour
     {
         EnemyAi.destination = Player.position;
     }
+    void OnCollisionEnter (Collision other) {
+        if (other.gameObject.CompareTag ("Player")) {
+            Debug.Log("Its find the player on the move to script");
+            EnemyAi.isStopped = true;
+        }
+    }
+    void OnCollisionExit (Collision other) {
+        if (other.gameObject.CompareTag("Player")) {
+            EnemyAi.isStopped = false;
+        }
+    }
 }

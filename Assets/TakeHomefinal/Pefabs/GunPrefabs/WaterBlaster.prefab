@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2633013710113468489}
   - component: {fileID: 2633013710113468490}
   - component: {fileID: 2633013710113468491}
-  - component: {fileID: 3001233919087433504}
+  - component: {fileID: 2129175076831027268}
   m_Layer: 0
   m_Name: WaterBlaster
   m_TagString: Item
@@ -132,7 +132,7 @@ MonoBehaviour:
   firePoint: {fileID: 2633013710625660780}
   bulletPrefab: {fileID: -8365906348964299273, guid: 6b96e1ac2a750874290be43383e445bd,
     type: 3}
---- !u!114 &3001233919087433504
+--- !u!114 &2129175076831027268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +145,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomName: {fileID: 7612937107120914664}
+  NewNames:
+  - Bloodspiller
+  - Harmony
+  - Remorse
+  - Singed Hand Cannon
+  - Proud Shooter
+  - Bandit's Golden Six-Shooter
+  - Furious Golden Hand Cannon
+  - Last Chance
+  - Gift Of Grieving Widows
+  - Finality
+  - Crusader Of Broken Dreams
+  - Mercy
+  - Might Of The Beast
+  - Warbringer
+  - Agony
+  - Spiteful Gun
+  - Private Six-Shooter
+  - Stormfury Ebon Flintlock
+  - Conqueror's Ironbark Flintlock
+  - Queller Of The Occult
+  - Daddy
+  - Dominion
+  - Contra
+  - Ultra85
+  - Iron man
+  - Ex-wife
+  - Captain
+  - Logic
+  - Stick
+  - Happy
 --- !u!1 &1777768435877635700
 GameObject:
   m_ObjectHideFlags: 0

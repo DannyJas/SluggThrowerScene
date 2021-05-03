@@ -29,12 +29,14 @@ public class Gun : MonoBehaviour, IItem
 
 
     public void Pickup (Transform hand) {
+      // if (Input.GetKey(KeyCode.E)) {
         Debug.Log("BANKS");
         this.gameObject.transform.SetParent(hand); 
         this.transform.localPosition = Vector3.zero;
         this.transform.localRotation = Quaternion.identity; 
         this.GetComponent<Rigidbody>().isKinematic = true;  
-        this.GetComponent<Collider>().enabled = false; 
+        this.GetComponent<Collider>().enabled = false;  
+       //}
     }
 
     public void Use () {
