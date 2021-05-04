@@ -15,9 +15,9 @@ public class WinCanvas : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space)) {
             SceneManager.LoadScene("Final");
+        }
          if (Input.GetKeyDown(KeyCode.LeftShift)) {
              Application.Quit();
          } 
-        }
     }
 }

@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             heldItem.Pickup(hand);  
         } 
 
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+        if (Input.GetKeyDown(KeyCode.C)) {
             Application.Quit();
         } 
     }
