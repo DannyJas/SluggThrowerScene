@@ -40,7 +40,10 @@ public class UserUi : MonoBehaviour
              FinalEnemyScrpt.enemieskilled = 0;
          }
          if (playerHealth.health > 100) {
-             HintsAndInstruct.text ="YOU FOUND AS EASTER EGG!";
+             HintsAndInstruct.text ="YOU FOUND AN EASTER EGG!";
          }
+    }
+  public void IfPressedQuit(){
+        Application.Quit();
     }
 }

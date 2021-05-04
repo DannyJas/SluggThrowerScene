@@ -58,7 +58,11 @@ public class PlayerController : MonoBehaviour
 
             heldItem = lastTouchedItem;
             heldItem.Pickup(hand);  
-        }  
+        } 
+
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            Application.Quit();
+        } 
     }
 
     int totalKeys = 0; 
