@@ -39,5 +39,8 @@ public class UserUi : MonoBehaviour
              playerHealth.health = 100;
              FinalEnemyScrpt.enemieskilled = 0;
          }
+         if (playerHealth.health > 100) {
+             HintsAndInstruct.text ="YOU FOUND AS EASTER EGG!";
+         }
     }
 }
