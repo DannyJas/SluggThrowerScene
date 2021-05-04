@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
     IItem heldItem; 
     GameObject Bullet;
 
+    bool canPickUp;
+
+    IItem lastTouchedItem;
+
     void Update() {
     
     if(Input.GetButtonDown("Fire1")) {
@@ -50,12 +54,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("We aren't holding anything."); 
         }
     }
-    // if (Input.GetKeyDown(KeyCode.E)) {
-    //     if (gameObject.CompareTag("Item")) {
-    //         heldItem = gameObject.GetComponent<IItem>(); 
-    //         heldItem.Pickup(hand);  
-    //     }  
-    // }
+    if (Input.GetKeyDown(KeyCode.E) && canPickUp == true) {
+
+            heldItem = lastTouchedItem;
+            heldItem.Pickup(hand);  
+        }  
     }
 
     int totalKeys = 0; 
@@ -78,13 +81,10 @@ public class PlayerController : MonoBehaviour
         
     Debug.Log("I have hit" + other.gameObject.name);
         if(other.gameObject.CompareTag("Item")) {
-            Debug.Log("HELP ME PLEASE");
-            if(heldItem != null) {
-                return;
-            } //if (Input.GetKeyDown(KeyCode.E)) {
-            heldItem = other.GetComponent<IItem>(); 
-            heldItem.Pickup(hand); 
-            //}
+            if(heldItem == null) {
+                canPickUp = true;
+                lastTouchedItem = other.GetComponent<IItem>();
+            } 
         }
         if (other.gameObject.CompareTag("floor")) {
             other.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV();
@@ -122,6 +122,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("floor"))
         {
             other.gameObject.GetComponent<Renderer>().material.color = Color.white;
+        }
+        if (other.gameObject.CompareTag("Item")) {
+          canPickUp =false;
+          lastTouchedItem = null;  
         }
     }
 }
